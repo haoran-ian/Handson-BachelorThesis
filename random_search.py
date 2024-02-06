@@ -47,7 +47,9 @@ del l, problem
 print('###############################Example 2###############################')
 # a very basic setup of ioh.Experiment
 exp = Experiment(algorithm=RandomSearch, fids=[1, 5, 24], iids=[1],
-                 dims=[5, 20], reps=10, problem_class=ProblemClass.BBOB)
+                 dims=[5, 20], reps=10, problem_class=ProblemClass.BBOB,
+                 output_directory="data_examples", folder_name="example_2",
+                 algorithm_name="random search, example 2", algorithm_info="")
 # run the experiment
 exp()
 
@@ -56,5 +58,7 @@ print('###############################Example 2###############################')
 exp = Experiment(algorithm=RandomSearch, fids=[1, 5, 24], iids=[1],
                  dims=[5, 20], reps=10, problem_class=ProblemClass.BBOB,
                  output_directory="data_examples", folder_name="example_3",
-                 algorithm_name="random search, example 3", algorithm_info="")
+                 algorithm_name="random search, example 3", algorithm_info="",
+                 store_positions=True, merge_output=True, zip_output=True, 
+                 remove_data=True)
 exp()
