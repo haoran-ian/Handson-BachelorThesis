@@ -55,8 +55,9 @@ exp()
 
 # example 3, a more comprehensive example of ioh.Experiment
 print('###############################Example 2###############################')
-exp = Experiment(algorithm=RandomSearch, fids=[1, 5, 24], iids=[1],
-                 dims=[5, 20], reps=10, problem_class=ProblemClass.BBOB,
+exp = Experiment(algorithm=RandomSearch, fids=list(range(1, 25)), iids=[1],
+                 dims=[2, 3, 5, 10, 20, 40], reps=10,
+                 problem_class=ProblemClass.BBOB,
                  output_directory="data_examples", folder_name="example_3",
                  algorithm_name="random search, example 3", algorithm_info="",
                  store_positions=True, merge_output=True, zip_output=True, 
